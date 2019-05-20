@@ -1,18 +1,19 @@
-
 var app = new Vue({
     el: '#app',
     data: {
-        msg1: 'はじめてのVue.js!',
-        msg2: 'Vue.jsの世界へ'
+        inStr: ''
+    },
+    methods: {
+        kaibun: function () {
+            if (this.inStr.length === 0) {
+                return ;
+            }
+            var rStr = this.inStr.split('').reverse().join('');
+            if (this.inStr === rStr) {
+                return '回文です！';
+            } else {
+                return '回文ではありません！！';
+            }
+        }
     }
 });
-
-var person = {
-    name: "山田太郎",
-    age: 25,
-    scores: { math: [40,50], eng: [70, 60]},
-    sayHello: function() {
-        console.log('Hello!!');
-    }
-};
-

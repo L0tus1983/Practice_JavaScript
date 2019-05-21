@@ -1,10 +1,22 @@
-function say(greetings, honorifcs) {
-  console.log(greetings + " " + honorifcs + this.name);
-}
+var app = new Vue ({
+    el: "#app",
+    data: {
+        //kuji: "../figs/omikuji.png",
+        kujis: ["daikichi.png","kichi.png","kyou.png"],
+        imageAttrs:{
+            src: "../figs/omikuji.png",
+            width: "300",
+            height: "200",
+            alt: "おみくじ"
+        }
+    },
 
-var tom = { name: "Tom Sawuer" };
-var becky = { name: "Becky Thatcher" };
-say.apply(tom, ["Hello!", "Mr."]);
-say.apply(becky, ["Hi!", "Ms."]);
-say.call(tom, "Hello", "Mr");
-say.call(becky, "Hi!", "Ms");
+    methods:{
+        uranau: function() {
+            console.log(this.imageAttrs)
+            this.imageAttrs.src = "../figs/" +
+            this.kujis[Math.floor(Math.random() * this.kujis.length)];
+
+        }
+    }
+});

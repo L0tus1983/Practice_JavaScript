@@ -6,12 +6,12 @@
   </head>
   <body>
     <div id="app">
-      <h1>回文チェック</h1>
-      <label for="inStr">文字列を入力して：</label>
-      <input type="text" name="inStr" v-model.trim="inStr" />
-      <p>{{kaibun()}}</p>
-      <script type="text/javascript" src="js/vue.js"></script>
-      <script type="text/javascript" src="js/main.js"></script>
+      <button name="myBtn" v-on:click="uranau()">占う</button>
+      <div>
+        <img v-bind="imageAttrs" />
+      </div>
     </div>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

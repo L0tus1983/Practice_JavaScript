@@ -1,27 +1,10 @@
-function quicksort(x, first, last) {
-    var p = x[Math.floor((first + last) / 2)];
-    for (var i = first, j = last;;i++,j--){
-        while (x[i] < p) {
-            i++;
-        }
-        while (p < x[j]) {
-            j--;
-        }
-        if ( i >= j) {
-            break;
-        }
-        var w = x[i];
-        x[i] = x[j];
-        x[j] = w;
-    }
-    if (first < i - 1) {
-        quicksort(x, first, i - 1);
-    }
-    if (j + 1 < last) {
-        quicksort(x, j + 1, last);
-    }
+function say(greetings, honorifcs) {
+  console.log(greetings + " " + honorifcs + this.name);
 }
 
-var a =[7,2,5,1,8,9,6,3];
-quicksort(a, 0, a.length - 1);
-console.log(a);
+var tom = { name: "Tom Sawuer" };
+var becky = { name: "Becky Thatcher" };
+say.apply(tom, ["Hello!", "Mr."]);
+say.apply(becky, ["Hi!", "Ms."]);
+say.call(tom, "Hello", "Mr");
+say.call(becky, "Hi!", "Ms");

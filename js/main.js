@@ -1,10 +1,13 @@
-var person1 = {
-    name: "Tom",
-    sayHello: function() {
-        console.log("Hello! " + this.name);
+function mixin(target, source) {
+  for (var property in source) {
+    if (source.hasOwnProperty(property)) {
+      target[property] = source[property];
     }
-};
+  }
+  return target;
+}
 
-var person2 = Object.create(person1);
-person2.name = "Huck";
-person2.sayHello();
+var obj1 = { a: 1, b: 2 };
+var obj2 = { b: 3, c: 4 };
+var obj = mixin(obj1, obj2);
+console.log(obj);

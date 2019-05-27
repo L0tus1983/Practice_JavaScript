@@ -1,5 +1,7 @@
-"use strict";
+'use strict'
 
 window.onload = function() {
-  console.log(document.childNodes[1].childNodes[2].nodeName);
-};
+  let element = document.getElementById('sec3')
+  let rect = element.getBoundingClientRect()
+  scrollTo(rect.left + getScrollLeft(), rect.top + getScrollTop())
+}

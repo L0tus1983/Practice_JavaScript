@@ -1,15 +1,20 @@
-"use strict";
-window.onload = function () {
-  let userCheck = prompt('Who\'s there?')
-  let adminPass;
-  if (userCheck === 'Admin') {
-    adminPass = prompt('Password?', '')
-    if (adminPass === 'The') {
+'use strict'
 
+window.onload = function () {
+  function getScrollTop() {
+    if (window.pageYOffset !== undefined) {
+      return window.pageYOffset;
+    } else {
+      return document.documentElement.scrollTop ||
+        document.body.scrollTop;
     }
-  } else if (userCheck === null) {
-    alert('Canceled')
-  } else {
-    alert('I don\'t know you')
+  }
+  function getScrollLeft() {
+    if (window.pageXOffset !== undefined) {
+      return window.pageXOffset;
+    } else {
+      return document.documentElement.scrollLeft ||
+        document.body.scrollLeft;
+    }
   }
 }

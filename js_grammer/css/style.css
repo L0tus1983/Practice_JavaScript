@@ -1,21 +1,21 @@
-/* h1 {
-  colour: blue;
-  background-color: yellow;
-  border: 1px solid black;
+div {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: #c66155;
+  border-bottom: solid 6px #962111;
+  text-align: center;
+  vertical-align: middle;
+  margin: 20px;
+  border-radius: 3em;
 }
 
-p {
-  color: red;
+div:active {
+  height: 206px;
+  border-bottom: 0;
 }
 
-p,
-li {
-  text-decoration: underline;
-} */
 span {
-  background-color: aqua;
-  height: 100px;
-  width: 100px;
-  padding: 10px;
-  margin: 10px 10px;
+  height: 50%;
+  vertical-align: middle;
 }

@@ -12,3 +12,10 @@ p,
 li {
   text-decoration: underline;
 } */
+span {
+  background-color: aqua;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  margin: 10px 10px;
+}

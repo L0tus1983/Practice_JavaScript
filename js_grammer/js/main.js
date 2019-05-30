@@ -1,16 +1,16 @@
-"use strict";
-
-window.onload = function() {
-  //
-  let req = new XMLHttpRequest();
-  //
-  req.onreadystatechange = function() {
-    if (req.readyState === 4) {
-      if (req.status === 200) {
-        document.getElementById("view").innerHTML = req.responseText;
-      }
+function getUserInfo(userId) {
+  const request = new XMLHttpRequest();
+  request.open("GET", `https://api.github.com/users/${userId}`);
+  request.addEventListener("load", event => {
+    if (event.target.status !== 200) {
+      console.error(`${event.target.status}: ${event.target.statusText}`);
+      return;
     }
-  };
-  req.open("GET", "http://codecamp.lesson.codecamp.jp/javascript/ajax.txt");
-  req.send(null);
-};
+    console.log(event.target.status);
+    console.log(event.target.responseText);
+  });
+  request.addEventListener("error", () => {
+    console.error("Network Error");
+  });
+  request.send();
+}

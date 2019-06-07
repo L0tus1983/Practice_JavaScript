@@ -14,3 +14,13 @@ table-center {
 table {
   width: 50%;
 }
+
+/* 設問用 */
+.face {
+  color: red;
+}
+
+.back {
+  color: red;
+  opacity: 0.4;
+}

@@ -1,6 +1,7 @@
 "use strict";
 
 window.onload = function() {
+<<<<<<< HEAD
   let header = document.getElementById("header");
   let deg = 0;
   let rotateHeader = () => {
@@ -17,4 +18,8 @@ window.onload = function() {
   };
 
   setInterval(rotateHeader, 20);
+=======
+  let select = document.getElementById("aaa");
+  select.remove(0);
+>>>>>>> 7bde996e5efeb8ee6242ebb9a80dce78605ed07f
 };

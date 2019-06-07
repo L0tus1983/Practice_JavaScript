@@ -1,7 +1,6 @@
 "use strict";
 
 window.onload = function() {
-  (function() {
-    alert("test");
-  })();
+  let select = document.getElementById("aaa");
+  select.remove(0);
 };

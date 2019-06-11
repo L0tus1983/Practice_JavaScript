@@ -1,7 +1,13 @@
 "use strict";
 
-let m = new Map();
+function func() {
+  console.log("aaa");
+}
+function func2() {
+  console.log("bbb");
+}
 
-m.set(2, "foo");
-m.set(null, "bar");
-console.log(m.get(2), m.get(null));
+let p = document.getElementById("abcd");
+
+p.addEventListener("click", func, false);
+p.addEventListener("click", func2, false);

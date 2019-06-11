@@ -1,6 +1,13 @@
 "use strict";
 
-window.onload = function() {
-  let select = document.getElementById("aaa");
-  select.remove(0);
-};
+function func() {
+  console.log("aaa");
+}
+function func2() {
+  console.log("bbb");
+}
+
+let p = document.getElementById("abcd");
+
+p.addEventListener("click", func, false);
+p.addEventListener("click", func2, false);

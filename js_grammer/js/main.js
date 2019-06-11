@@ -1,6 +1,7 @@
 "use strict";
 
-window.onload = function() {
-  let select = document.getElementById("aaa");
-  select.remove(0);
-};
+let m = new Map();
+
+m.set(2, "foo");
+m.set(null, "bar");
+console.log(m.get(2), m.get(null));

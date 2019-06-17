@@ -1,13 +1,12 @@
-"use strict";
+"use strict"
 
-function func() {
-  console.log("aaa");
+window.onload = () => {
+
+  const button = document.getElementById('button')
+  button.addEventListener("click", () => {
+    document.body.textContent = `Hello, World !`
+  })
+
+
 }
-function func2() {
-  console.log("bbb");
-}
 
-let p = document.getElementById("abcd");
-
-p.addEventListener("click", func, false);
-p.addEventListener("click", func2, false);

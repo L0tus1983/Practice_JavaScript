@@ -1,31 +1,10 @@
 @charset "UTF-8";
-/* html {
+
+html {
   font-size: 62.5%;
-} */
+}
 
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-table-center {
-  text-align: center;
-}
-
-table {
-  width: 50%;
-}
-
-/* 設問用 */
-.face {
-  color: red;
-}
-
-.back {
-  color: red;
-  opacity: 0.4;
-}
-
-.cascade {
-  background: #6677ff;
 }

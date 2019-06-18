@@ -1,43 +1,27 @@
 'use strict'
 
-function greet() {
-  let greetingObj
-  let greetingWord
-  const targetName = document.getElementById('name').value
-  const hour = new Date().getHours()
+// $(document).ready()イベントはwindow.onload()
+// (画像など全ての読込を終える)より前の、DOM読込完了すれば
+// 実行されるようになる。
+// $(document).ready() => $(function()) と簡単に書ける
 
-  if (6 <= hour && hour < 12) {
-    greetingWord = 'Good morning'
-  } else if (12 <= hour && hour < 18) {
-    greetingWord = 'Hello'
-  } else {
-    greetingWord = 'Good evening'
-  }
+$(() => {
+  //
+  $('.accordion-title a').click(function() {
+    let content = $(this)
+      .closest('section')
+      .find('.accordion-content')
 
-  greetingObj = {
-    greetingWord: greetingWord,
-    targetName: targetName
-  }
+    //
+    if (!content.is(':visible')) {
+      //
+      $('.accordion-content:visible').slideUp()
 
-  return greetingObj
-}
+      //
+      content.slideDown()
+    }
 
-document
-  .getElementById('greeting-button')
-  .addEventListener('click', function() {
-    let greetingObj = greet()
-
-    document.getElementById('box').innerHTML = `${greetingObj.greetingWord}、${
-      greetingObj.targetName
-    }.`
+    //
+    return false
   })
-
-document
-  .getElementById('cheerful-button')
-  .addEventListener('click', function() {
-    let greetingObj = greet()
-
-    document.getElementById('box').innerHTML = `${
-      greetingObj.greetingWord
-    }！、${greetingObj.targetName}！！`
-  })
+})

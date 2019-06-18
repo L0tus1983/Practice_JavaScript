@@ -3,8 +3,8 @@
 function greet() {
   let greetingObj
   let greetingWord
-  let targetName = document.getElementById('name').value
-  let hour = new Date().getHours()
+  const targetName = document.getElementById('name').value
+  const hour = new Date().getHours()
 
   if (6 <= hour && hour < 12) {
     greetingWord = 'Good morning'

@@ -7,5 +7,21 @@
 
 $(() => {
   //
-  $('.accordion-title a')
+  $('.accordion-title a').click(function() {
+    let content = $(this)
+      .closest('section')
+      .find('.accordion-content')
+
+    //
+    if (!content.is(':visible')) {
+      //
+      $('.accordion-content:visible').slideUp()
+
+      //
+      content.slideDown()
+    }
+
+    //
+    return false
+  })
 })

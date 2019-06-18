@@ -1,27 +1,25 @@
 'use strict'
 
-// $(document).ready()イベントはwindow.onload()
-// (画像など全ての読込を終える)より前の、DOM読込完了すれば
-// 実行されるようになる。
-// $(document).ready() => $(function()) と簡単に書ける
+// セレクタに該当するタブを表示
+function showTab(selector) {
+  // selectorの中身
+  console.log(selector)
+
+  $('.tabs-menu div').removeClass('active')
+  $('.tabs-menu ' + selector).addClass('active')
+  
+  $('.tabs-content > div').hide()
+  $(selector).show()
+  
+}
 
 $(() => {
-  //
-  $('.accordion-title a').click(function() {
-    let content = $(this)
-      .closest('section')
-      .find('.accordion-content')
+  // 初期状態として１番目のタブを表示
+  showTab('#tab-menu-a')
 
-    //
-    if (!content.is(':visible')) {
-      //
-      $('.accordion-content:visible').slideUp()
-
-      //
-      content.slideDown()
-    }
-
-    //
+  $('.tabs-menu div').click(function () {
+    let selector = $(this).attr('id')
+    showTab(selector)
     return false
   })
 })

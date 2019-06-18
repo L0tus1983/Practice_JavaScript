@@ -9,35 +9,58 @@ html {
   box-sizing: border-box;
 }
 
-body {
+body{
   color: #3f4548;
 }
 
-/* アコーディオンのタイトル部分 */
-.accordion-title {
+.tabs-menu{
   margin: 0;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  font-size: 1rem;
+  padding: 0;
+  list-style-type: none;
 }
-.accordion-title a {
+
+.tabs-menu::after{
+  content: '';
+  clear: both;
   display: block;
-  padding: 6px;
+}
+
+.tabs-menu div {
+  float: left;
+  margin-right: 8px;
+  margin-bottom: -1px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 8px 14px;
+ 
+  border-color: transparent;
+  border-radius: 4px 4px 0 0;
+  transition: all .3s;
+  user-select: none;
+  cursor: pointer;
+}
+
+.tabs-menu div:not(.active):hover{
+  border-color: #f1f1f1 #f1f1f1 #aaa;
+  background-color: #f1f1f1;
+}
+
+.tabs-menu .active{
+  border-color: #aaa #aaa transparent #aaa;
+  background-color: #fff;
+}
+
+.tabs-menu .active {
   color: #3f4548;
-  text-decoration: none;
 }
 
-/* アコーディオンのコンテンツ部分 */
-.accordion-content {
-  /* 初期状態では非表示 */
+.tabs-content{
+  clear: both;
+  border: 1px solid #aaa;
+  border-radius: 0 4px 4px 4px;
+  padding: 10px;
+}
+
+.tabs-content div {
   display: none;
-
-  height: 60px;
-  padding: 12px 6px;
-  border: 1px solid #ccc;
-}
-
-/* accordion-content-activeクラスが付いているものは初期状態で表示しておく */
-.accordion-content.accordion-content-active {
-  display: block;
 }

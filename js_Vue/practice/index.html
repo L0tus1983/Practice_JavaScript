@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js Test</title>
+    <link rel="stylesheet" href="/practice/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        <button @click="countUp()">{{ count }} 回</button>
+      </p>
+      <p>現在時刻（メソッド）：{{ getDate() }}</p>
+      <p>現在時刻（算出プロパティ）：{{ date }}</p>
+    </div>
+    <script src="/practice/main.js"></script>
+  </body>
+</html>

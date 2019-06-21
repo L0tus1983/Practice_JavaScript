@@ -4,9 +4,10 @@ html {
   font-size: 62.5%;
 }
 
-*::before,
+/* *::before,
 *::after {
   box-sizing: border-box;
+<<<<<<< HEAD
 }
 
 body{
@@ -41,3 +42,31 @@ button{
 .animated{
   opacity: 0;
 }
+=======
+} */
+
+.box {
+  margin: 0 auto;
+  display: inline-block;
+  transition: all 0.3s;
+  transform: perspective(400px);
+}
+
+.kitten {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  /* padding: 10px; */
+  box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.5);
+}
+
+.pic {
+  padding: 10px;
+}
+
+.box:hover {
+  transform: perspective(400px) rotate3d(0, -1, 0, 179deg);
+
+  opacity: 0.5;
+}
+>>>>>>> 199a277b9d692e96b00e2417115025acc807aadd
